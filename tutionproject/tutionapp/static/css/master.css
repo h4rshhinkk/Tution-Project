@@ -1,0 +1,58 @@
+
+.navbar{
+    position: sticky;
+    top: 0%;
+    z-index: 10;
+}
+
+.navbar-brand{
+    font-family: "Audiowide", sans-serif;
+    text-decoration: none;
+}
+
+.nav-item{
+    margin-left: 20px;
+}
+
+.top-header{
+    /* background-image: linear-gradient(to right, #3e5151, #decba4); */
+    /* background-image: linear-gradient(to right, #fc466b, #3f5efb); */
+    background: linear-gradient(to right, #c94b4b, #4b134f);
+}
+
+.searchbtn{
+
+}
+
+.btn-login{
+    margin-left: 562px;
+}
+
+                                                             /* Head first carousal */
+
+.carousel-caption h5{
+    font-size: 3.40rem;
+    margin-bottom: 0px;
+}
+ 
+
+.carousel-caption p{
+    font-size: 1.7rem;
+    margin-bottom: 215px;
+}
+
+
+
+
+
+
+                                                                       /* footer */
+.bottom-foot{
+    background: linear-gradient(to right, #c94b4b, #4b134f);
+
+}
+
+
+.text-center{
+    text-decoration: none;
+}
