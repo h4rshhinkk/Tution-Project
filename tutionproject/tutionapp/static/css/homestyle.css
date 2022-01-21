@@ -32,6 +32,35 @@
 .btn-login{
     margin-left: 562px;
 }
+  /* LOGIN MODAL*/
+
+ .form-control{
+border: none;
+border-bottom: 1px solid #b64242;
+}
+
+.sign_btn{
+    background-color: rgb(74, 153, 243);
+    border-radius: 40px;
+}
+
+
+
+.social_btn{
+    background-color: rgb(74, 153, 243);
+    width: 85px;
+    border-radius: 40px;
+}
+
+
+
+
+
+/* LOGIN MODAL END */
+
+
+
+
 
                                                              /* Head first carousal */
 
@@ -114,3 +143,13 @@
 .text-center{
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+

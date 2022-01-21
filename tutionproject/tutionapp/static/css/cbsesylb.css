@@ -3,7 +3,6 @@
 .carousel-caption h5{
     font-size: 3.40rem;
     margin-bottom: 8px;
-    
 }
  
 
@@ -29,25 +28,24 @@
 /*  END OF HEAD PART  */
 
 
-.kercard-image{
+.cbsecard-image{
     overflow: hidden;
     border-radius: 20px;
 }
 
-.kerclsimg h3{
+.cbseclsimg h3{
     color: #777D82;
     font-weight: 400;
     margin-top: 10px;
     margin-left: 90px;
-    font-size: 30px;
     
 }
 
-.kerclsimg img{
+.cbseclsimg img{
     transition: all .5s ease;
 }
 
-.kerclsimg img:hover{
+.cbseclsimg img:hover{
 transform: scale(1.1);
 }
 

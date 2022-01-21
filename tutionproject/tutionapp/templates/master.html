@@ -13,11 +13,21 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
   <link rel="stylesheet" href="{% static 'css/master.css' %}">
+  <link rel="stylesheet" href="{% static 'css/kersylb.css' %}">
+  <link rel="stylesheet" href="{% static 'css/k5std.css' %}">
+  <link rel="stylesheet" href="{% static 'css/teachers.css' %}">
+  <link rel="stylesheet" href="{% static 'css/cbsesylb.css' %}">
+  <link rel="stylesheet" href="{% static 'css/contactus.css' %}">
+  
+
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <title>eLearn</title>
+  <title>Mytution</title>
 </head>
 
 <body>
@@ -30,7 +40,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark top-header">
         <a class="navbar-brand logo-text animate__animated animate__pulse" style="font-size: 30px;"
-          href="#">Mytution.</a>
+          href="{% url 'home' %}">Mytution.</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -42,7 +52,7 @@
 
 
             <li class="nav-item contact-nav">
-              <a class="nav-link" href="/home">Home</a>
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
 
 
@@ -52,16 +62,16 @@
                 Courses
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Kerala State Syllabus</a>
+                <a class="dropdown-item" href="/kersylb">Kerala State Syllabus</a>
 
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">CBSE Syllabus</a>
+                <a class="dropdown-item" href="{% url 'cbsesylb' %}">CBSE Syllabus</a>
 
               </div>
             </li>
 
             <li class="nav-item contact-nav">
-              <a class="nav-link" href="#">Teachers</a>
+              <a class="nav-link" href="{% url 'teachersinfo' %}">Teachers</a>
             </li>
 
             <li class="nav-item contact-nav">
@@ -70,7 +80,7 @@
 
 
             <li class="nav-item contact-nav">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="/contactus">Contact</a>
             </li>
 
             <!-- <form class="form-inline my-2 mr-3 my-lg-0">
@@ -78,15 +88,79 @@
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form> -->
 
-            <button type="button" class="btn btn-success">Login</button>
-            <button type="button" class="btn btn-danger ml-2">Sign up</button>
+            <button type="button" class="btn btn-success" data-toggle="modal"
+              data-target="#elegantModalForm">Login</button>
+            <!-- <button type="button" class="btn btn-danger ml-2">Sign up</button> -->
 
 
 
           </ul>
         </div>
       </nav>
+        <!-- LOGIN MODAL sTART -->
 
+
+<!-- Modal -->
+<div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <!--Content-->
+    <div class="modal-content form-elegant">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h3 class="modal-title w-100 dark-grey-text  my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body mx-4">
+        <!--Body-->
+        <div class="md-form mb-5">
+          <input type="email" id="Form-email1" class="form-control validate" placeholder="Enter Your Email">
+          <!-- <label data-error="wrong" data-success="right" for="Form-email1">Your email</label> -->
+        </div>
+
+        <div class="md-form pb-3">
+          <input type="password" id="Form-pass1" class="form-control validate" placeholder="Enter Your Password">
+          <!-- <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label> -->
+          <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
+              Password?</a></p>
+        </div>
+
+        <!-- <div class="text-center mb-3">
+          <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a sign_btn">Sign in</button>
+        </div>
+
+       <p>Don't have an account?</p><a href="#" class="signuptoacc">Sign up</a>
+
+        <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+          with:</p> -->
+
+        <div class="row my-3 d-flex justify-content-center">
+          <!--Facebook-->
+          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a social_btn"><i class="fa fa-facebook-f text-center"></i></button>
+          <!--Twitter-->
+          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a social_btn"><i class="fa fa-twitter"></i></button>
+          <!--Google +-->
+          <button type="button" class="btn btn-white btn-rounded z-depth-1a social_btn"><i class="fa fa-google-plus"></i></button>
+        </div>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer mx-5 pt-3 mb-1">
+        <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
+            Sign Up</a></p>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+ <!-- Modal -->
+
+
+
+
+        <!-- LOGIN MODAL END -->
     </div>
   </div>
 
@@ -113,12 +187,10 @@
 
 
   <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="col-lg-12 container bottom-foot">
+  <div class="col-lg-12 container bottom-foot">
     <!-- Footer -->
-    <footer
-            class="text-center text-lg-start text-white"
-            style="background: linear-gradient(to right, #c94b4b, #4b134f);"
-            >
+    <footer class="text-center text-lg-start text-white"
+      style="background: linear-gradient(to right, #c94b4b, #4b134f);">
       <!-- Grid container -->
       <div class="container p-4 pb-0">
         <!-- Section: Links -->
@@ -131,15 +203,16 @@
                 Mytution
               </h6>
               <p style="text-align:start;">
-                We aim to make our students achieve their full potential. 
+                We aim to make our students achieve their full potential.
                 Considering that our prices are quite affordable and can be customised.
-                We value our students time and strive to work hard to deliver the best classes and to invest in their education.
+                We value our students time and strive to work hard to deliver the best classes and to invest in their
+                education.
               </p>
             </div>
             <!-- Grid column -->
-  
+
             <hr class="w-100 clearfix d-md-none" />
-  
+
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">HOME</h6>
@@ -157,12 +230,12 @@
               </p>
             </div>
             <!-- Grid column -->
-  
+
             <hr class="w-100 clearfix d-md-none" />
-  
+
             <!-- Grid column -->
             <hr class="w-100 clearfix d-md-none" />
-  
+
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
@@ -172,48 +245,28 @@
               <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
             </div>
             <!-- Grid column -->
-  
+
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-  
+
               <!-- Facebook -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #3b5998"
-                 href="#!"
-                 role="button"
-                 ><i class="fa fa-facebook-f"></i
-                ></a>
-  
+              <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i
+                  class="fa fa-facebook-f"></i></a>
+
               <!-- Twitter -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #55acee"
-                 href="#!"
-                 role="button"
-                 ><i class="fa fa-twitter"></i
-                ></a>
-  
+              <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i
+                  class="fa fa-twitter"></i></a>
+
               <!-- Google -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #dd4b39"
-                 href="#!"
-                 role="button"
-                 ><i class="fa fa-google"></i
-                ></a>
-  
+              <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i
+                  class="fa fa-google"></i></a>
+
               <!-- Instagram -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #ac2bac"
-                 href="#!"
-                 role="button"
-                 ><i class="fa fa-instagram"></i
-                ></a>
-  
-              
+              <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i
+                  class="fa fa-instagram"></i></a>
+
+
             </div>
           </div>
           <!--Grid row-->
@@ -221,32 +274,14 @@
         <!-- Section: Links -->
       </div>
       <!-- Grid container -->
-  
+
       <!-- Copyright -->
-      <div
-           class="text-center p-3"
-           style="background-color: rgba(0, 0, 0, 0.2)"
-           >
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2020 Copyright:
-        <a class="text-white" href=""
-           >Mytution.com</a
-          >
+        <a class="text-white" href="">Mytution.com</a>
       </div>
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
   </div>
   <!-- End of .container -->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  

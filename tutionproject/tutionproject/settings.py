@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tutionapp'
+    'tutionapp',
+    'tutionadmin'
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'tutionproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR,'tutionadmin/admtemp'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,7 +120,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'tutionapp/static')
+    os.path.join(BASE_DIR,'tutionapp/static'),
+    os.path.join(BASE_DIR,'tutionadmin/static')
 ]
 
 # Default primary key field type
