@@ -19,5 +19,7 @@ def fnusersignup(request):
     return render(request,'usersignup.html')
 def fnaboutus(request):
     return render(request,'aboutus.html')
+def fnc8std(request):
+    return render(request,'c8std.html')
 
 

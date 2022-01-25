@@ -9,6 +9,7 @@ urlpatterns=[
     path('fnk5std/',views.fnk5std,name='k5std'),
     path('contactus/',views.fncontactus,name='contactus'),
     path('usersignup/',views.fnusersignup,name="usignup"),
-    path('aboutus/',views.fnaboutus,name="aboutus")
+    path('aboutus/',views.fnaboutus,name="aboutus"),
+    path('c8std/',views.fnc8std,name="c8std")
     
 ]

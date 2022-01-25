@@ -130,6 +130,159 @@ border-bottom: 1px solid #b64242;
 
 
 
+/* TESTIMONIALS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.testontainer {
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.58);
+    border-radius: 16px;
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+
+.testcard {
+    border: none
+}
+
+.profile .proimg {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%
+}
+
+.second {
+    border: none;
+    border-left: 2px dotted lightgrey;
+    
+}
+
+
+.third {
+    border: none;
+    border-left: 2px dotted lightgrey;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .second {
+        border: none;
+        border-top: 2px dotted lightgrey;
+        margin-top: 25px
+    }
+
+    .third {
+        border: none;
+        border-top: 2px dotted lightgrey;
+        margin-top: 25px
+    }
+
+    .icon {
+        margin-top: 20px;
+        top: 0
+    }
+}
+
+.fa-quote-left:before {
+    font-size: 7px;
+    color: orangered;
+    position: relative;
+    bottom: 5px
+}
+
+.intro {
+    font-size: 11px;
+    margin-left: 13px;
+    position: relative;
+    bottom: 8px
+}
+
+.testrow {
+    padding-bottom: 53px
+}
+
+.company {
+    position: absolute;
+    bottom: -42px
+}
+
+.fa-amazon:before {
+    content: "\f270";
+    font-size: 23px
+}
+
+.icon {
+    margin-bottom: 15px;
+    position: relative;
+    bottom: 20px
+}
+
+.testheader {
+    padding-top: 35px;
+    padding-bottom: 50px
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -153,3 +306,82 @@ border-bottom: 1px solid #b64242;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 2nd Part   plan benefitpart */
+
+.ftrshead{
+
+
+    font-size: 2.75rem;
+        text-align: center;
+    
+    }
+    
+    
+    
+    .planbenefitsection {
+        display: flex;
+        flex: 0.7 1;
+        background-image: linear-gradient(
+    0deg
+    ,#f5f5fa,#fff7f1);
+        border-radius: 24px;
+        box-shadow: 0 3px 20px 0 hsl(0deg 0% 44% / 30%);
+        border: 1px solid #fd9644;
+        padding: 30px 52px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    
+    
+    
+    .twoplanbenefitcontainer {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    
+    
+    
+    .planbenefitcontainer {
+        flex: 1 0;
+    }
+    
+    
+    .planbenefittext {
+        font-size: 16px;
+        color: #000;
+    }
+    
+    
+    .planbenefitseparator {
+        background-color: #fd9644;
+        height: 1px;
+        width: 90%;
+        margin-top: 25px;
+    }
