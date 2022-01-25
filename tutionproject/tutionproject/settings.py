@@ -57,7 +57,8 @@ ROOT_URLCONF = 'tutionproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR,'tutionadmin/admtemp'],
+        'DIRS': [BASE_DIR/'tutionadmin/admtemp',BASE_DIR/'teachersmod/templates',BASE_DIR/'teachersmod/templates'],
+        # 'DIRS': [BASE_DIR,'teachersmod/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +122,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'tutionapp/static'),
-    os.path.join(BASE_DIR,'tutionadmin/static')
+    os.path.join(BASE_DIR,'tutionadmin/static'),
+    os.path.join(BASE_DIR,'teachersmo/static')
 ]
 
 # Default primary key field type

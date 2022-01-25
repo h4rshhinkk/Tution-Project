@@ -19,5 +19,6 @@ from django.urls import path,include
 urlpatterns = [
   
     path('',include('tutionapp.urls')),
-    path('admin/',include('tutionadmin.urls'))
+    path('admin/',include('tutionadmin.urls')),
+    path('teacherspanel/',include('teachersmod.urls'))
 ]
