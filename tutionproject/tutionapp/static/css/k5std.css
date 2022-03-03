@@ -144,8 +144,9 @@
     /* border-radius: 10px; */
 }
 
+
 .enrollbtn{
-    background:#c94b4b ;
+        background-color: seagreen;
         width: 100px;
         border: none;
         outline: none;
@@ -157,7 +158,7 @@
 }
 
 .enrollbtn:hover{
-    background: seagreen;
+    background: #c94b4b;
 }
 
 

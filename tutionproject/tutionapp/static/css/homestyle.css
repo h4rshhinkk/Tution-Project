@@ -19,15 +19,195 @@
     margin-left: 20px;
 }
 
+.nav-link{
+    color: rgb(255, 255,255,.5);
+}
+
 .top-header{
     /* background-image: linear-gradient(to right, #3e5151, #decba4); */
     /* background-image: linear-gradient(to right, #fc466b, #3f5efb); */
     background: linear-gradient(to right, #c94b4b, #4b134f);
 }
 
-.searchbtn{
-
+.userbtn{
+    font-size: 30px;
+    color: rgb(255, 255,255,.5);
+    text-decoration: none;
 }
+
+
+
+
+
+.user_btn .usericon{
+    list-style: none;
+    margin: 0;
+    font-size: 31px;
+    color: white;
+    cursor: pointer;
+    margin-left: 15px;
+    position: relative;
+}
+
+.user_btn .usericon:hover{
+    color: #ffffff;
+}
+
+/* .modal-open[style] {
+    padding-right: 0px !important;
+    } */
+
+
+
+.nav-link:hover{
+    color: #f5f5fa;
+}
+
+
+
+/* userprofile DROPdown start */
+
+.profiledropdwn .nav-item{
+    list-style: none;
+    margin-left: 0px;
+    font-size: 20px;
+    position: relative;
+}
+
+.profiledropdwn img{
+    margin-top: 7px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 28px;
+    vertical-align: middle;
+    
+}
+
+.profiledropdwn ul li{
+    list-style: none;
+}
+
+.profiledropdwn .userdrop{
+    margin-top: 15px;
+}
+
+.profiledropdwn .profusername{
+    margin-left: -13px;
+    margin-top: 10px;
+}
+
+.profiledropdwn .profile a{
+    text-decoration: none;
+    
+}
+
+.profiledropdwn .profile a:hover{
+    color: #b64242;
+}
+
+.profiledropdwn .profile .editprofile{
+    vertical-align: middle;
+    margin-top: -13px;
+    margin-left: 12px;
+}
+
+
+.profiledropdwn .profilelogout .btn{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+
+/* Carousal DROPdown start */
+
+
+/* 
+.classcar .dropdown .dropbtn {
+    
+    color: white;
+    padding: 16px;
+    font-size: 14px;
+    border: none;
+    
+  }
+    
+
+
+.classcar .dropdown{
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    
+}
+
+.classcar .dropdown-content{
+    display: none;
+    /* position: absolute; */
+    /* background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* overflow: visible; */
+    /* position: relative;
+     */
+    
+/* }  */
+
+/* .classcar .dropdown-content a{
+color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  
+}
+
+.classcar .dropdown-content a:hover {background-color: #ddd;}
+.classcar .dropdown:hover .dropdown-content {display: block;}
+.classcar .dropdown:hover .dropbtn {background-color: #3e8e41;}
+ /* */ 
+
+/* Carousal DROPdown END */
+
+
+
+
+/* USER MODAL START */
+
+
+
+
+.usermodal .modal-content {
+    position: relative;
+    /* display: -ms-flexbox; */
+    display: flex;
+    /* -ms-flex-direction: column; */
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    width: 123%;
+    height: 344px;
+    left: 716px;
+    bottom: 96px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .btn-login{
     margin-left: 562px;
@@ -52,6 +232,10 @@ border-bottom: 1px solid #b64242;
     border-radius: 40px;
 }
 
+.userdrop{
+    margin:.125rem 0 0 -8rem;
+}
+
 
 
 
@@ -65,8 +249,9 @@ border-bottom: 1px solid #b64242;
                                                              /* Head first carousal */
 
 .carousel-caption h5{
-    font-size: 3.40rem;
+    /* font-size: 3.40rem; */
     margin-bottom: 0px;
+    font-size: 350%;
 }
  
 
@@ -74,6 +259,41 @@ border-bottom: 1px solid #b64242;
     font-size: 1.7rem;
     margin-bottom: 215px;
 }
+
+/* 
+.homejumbo .jumbotron{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/carsl-1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    
+
+
+
+
+}
+
+
+.hdcontainer{
+
+}
+
+.hd1{
+    font-size: 3.40rem; 
+    margin-bottom: 0px;
+
+    font-family:monospace;
+}
+
+.hd2{
+    font-size: 1.7rem;
+    margin-bottom: 215px;
+    font-family:monospace;
+}
+
+ */
 
                                       /* BODY cousrse details */
 
@@ -385,3 +605,6 @@ border-bottom: 1px solid #b64242;
         width: 90%;
         margin-top: 25px;
     }
+
+
+    /* SignUp  */

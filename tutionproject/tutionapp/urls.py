@@ -10,6 +10,9 @@ urlpatterns=[
     path('contactus/',views.fncontactus,name='contactus'),
     path('usersignup/',views.fnusersignup,name="usignup"),
     path('aboutus/',views.fnaboutus,name="aboutus"),
-    path('c8std/',views.fnc8std,name="c8std")
+    path('c8std/',views.fnc8std,name="c8std"),
+    path('userprofilemaster/',views.fnuserprofilemaster,name='userprofilemaster'),
+    path('userprofile/',views.fnuserprofile,name='userprofile'),
+    path('usersecurity/',views.fnusersecurity,name='usersecurity'),
     
 ]

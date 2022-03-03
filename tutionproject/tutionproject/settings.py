@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tutionapp',
-    'tutionadmin'
+    'tutionadmin',
+    'teachersmod'
 ]
 
 MIDDLEWARE = [
@@ -124,7 +125,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'tutionapp/static'),
     os.path.join(BASE_DIR,'tutionadmin/static'),
-    os.path.join(BASE_DIR,'teachersmo/static')
+    os.path.join(BASE_DIR,'teachersmod/static')
 ]
 
 # Default primary key field type

@@ -21,13 +21,19 @@
     href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-  <title>eLearn</title>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+  <title>Mytution</title>
 </head>
 
 <body>
 
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12 col-sm-12">
 
       <!-- Navigation BAR -->
 
@@ -95,76 +101,211 @@
 
 
 
+
+
           </ul>
+          <!-- <div class="userbtn">
+            <a class="nav-link" href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-user-circle"></i></a>
+
+        </div> -->
+          <div class="profiledropdwn">
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa fa-user-circle"></i>
+              </a>
+              <div class="dropdown-menu userdrop" aria-labelledby="navbarDropdown">
+                <div style="height: 200px; width: 200px;" class="profile">
+                  <ul>
+
+                    <li>
+                      <img src="{% static 'images/avatar.png' %}">
+                    </li>
+
+                    <li>
+                      <p class="profusername">
+                        Mohammed Harshin</p>
+                    </li>
+
+                    <li class="editprofile">
+                      <a href="/userprofile"><i class="fa fa-edit icon1"></i> View Profile</a>
+                    </li>
+
+                    <li class="profilelogout">
+                      <a href="#" class="btn btn-danger">Log Out</a>
+                    </li>
+
+
+
+                  </ul>
+                </div>
+
+              </div>
+            </li>
+          </div>
+          <!-- <div class="user_btn">
+          <li class="usericon" ><i class="fa fa-user-circle"></i>
+            
+          </li>
+
+        </div> -->
+
+
         </div>
       </nav>
+
+
+
+
+
 
       <!-- LOGIN MODAL sTART -->
 
 
       <!-- Modal -->
-      <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <!--Content-->
-          <div class="modal-content form-elegant">
-            <!--Header-->
-            <div class="modal-header text-center">
-              <h3 class="modal-title w-100 dark-grey-text  my-3" id="myModalLabel"><strong>Sign in</strong></h3>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <!--Body-->
-            <div class="modal-body mx-4">
+      <form id="signinform">
+        <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content form-elegant">
+              <!--Header-->
+              <div class="modal-header text-center">
+                <h3 class="modal-title w-100 dark-grey-text  my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
               <!--Body-->
-              <div class="md-form mb-5">
-                <input type="email" id="Form-email1" name="email" class="form-control validate"
-                  placeholder="Enter Your Email">
-                <!-- <label data-error="wrong" data-success="right" for="Form-email1">Your email</label> -->
-              </div>
+              <div class="modal-body mx-4">
+                <!--Body-->
+                <div class="md-form mb-5">
+                  <input type="email" id="Form-email1" name="email" class="form-control validate"
+                    placeholder="Enter Your Email">
+                  <!-- <label data-error="wrong" data-success="right" for="Form-email1">Your email</label> -->
+                </div>
 
-              <div class="md-form pb-3">
-                <input type="password" id="Form-pass1" name="password" class="form-control validate"
-                  placeholder="Enter Your Password">
-                <!-- <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label> -->
-                <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
-                    Password?</a></p>
-              </div>
+                <div class="md-form pb-3">
+                  <input type="password" id="Form-pass1" name="password" class="form-control validate"
+                    placeholder="Enter Your Password">
+                  <!-- <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label> -->
+                  <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
+                      Password?</a></p>
+                </div>
 
-              <div class="text-center mb-3">
-          <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a sign_btn">Sign in</button>
-        </div>
-
-       <!-- <p>Don't have an account?</p><a href="#" class="signuptoacc">Sign up</a>
+                <div class="text-center mb-3">
+                  <button type="submit" class="btn blue-gradient btn-block btn-rounded z-depth-1a sign_btn">Sign
+                    in</button>
+                </div>
+                <!-- 
+       <p>Don't have an account?</p><a href="#" class="signuptoacc">Sign up</a>
 
         <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
           with:</p> -->
 
-              <div class="row my-3 d-flex justify-content-center">
-                <!--Facebook-->
-                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a social_btn"><i
-                    class="fa fa-facebook-f text-center"></i></button>
-                <!--Twitter-->
-                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a social_btn"><i
-                    class="fa fa-twitter"></i></button>
-                <!--Google +-->
-                <button type="button" class="btn btn-white btn-rounded z-depth-1a social_btn"><i
-                    class="fa fa-google-plus"></i></button>
+                <div class="row my-3 d-flex justify-content-center">
+                  <!--Facebook-->
+                  <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a social_btn"><i
+                      class="fa fa-facebook-f text-center"></i></button>
+                  <!--Twitter-->
+                  <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a social_btn"><i
+                      class="fa fa-twitter"></i></button>
+                  <!--Google +-->
+                  <button type="button" class="btn btn-white btn-rounded z-depth-1a social_btn"><i
+                      class="fa fa-google-plus"></i></button>
+                </div>
+              </div>
+              <!--Footer-->
+              <div class="modal-footer mx-5 pt-3 mb-1">
+                <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="usersignup"
+                    class="blue-text ml-1">
+                    Sign Up</a></p>
               </div>
             </div>
-            <!--Footer-->
-            <div class="modal-footer mx-5 pt-3 mb-1">
-              <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="usersignup"
-                  class="blue-text ml-1">
-                  Sign Up</a></p>
-            </div>
+            <!--/.Content-->
           </div>
-          <!--/.Content-->
         </div>
-      </div>
+      </form>
       <!-- Modal -->
 
+
+      <style>
+        .error {
+          color: red;
+          font-size: 14px;
+
+
+        }
+      </style>
+
+
+
+      <script>
+
+        // $(document).ready(function(){
+        //     $("#elegantModalForm").modal('show');
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+        $('#signinform').validate({
+          rules: {
+            email: {
+              required: true,
+              email: true
+            },
+            password: {
+              required: true,
+              minlength: 8,
+              maxlength: 30,
+              pwcheck: true,
+              //  checklower: true,
+              //   checkupper: true,
+              //   checkdigit: true
+            }
+          },
+
+          messages: {
+            email: {
+
+              required: "*Please enter email address",
+              email: "*please enter a valid email address",
+
+            },
+
+            password: {
+              required: '*this field is required',
+              minlength: '*Password must be at least 8 Characters long',
+              pwcheck: 'Password is not strong enough'
+              //  checklower: "Need atleast 1 lowercase alphabet",
+              //   checkupper: "Need atleast 1 uppercase alphabet",
+              //   checkdigit: "Need atleast 1 digit"
+            },
+
+          },
+
+          submitHandler: function (form) {
+            form.submit();
+          }
+
+
+
+
+        });
+
+
+
+
+      </script>
 
 
 
@@ -174,7 +315,7 @@
   </div>
 
 
-  <div class="row">
+  <div class="row homejumbo">
     <div class="col-lg-12">
 
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -189,26 +330,17 @@
               </p>
             </div>
           </div>
-          <!-- <div class="carousel-item">
-          <img class="d-block w-100" src="{% static 'images/carsl1.jpg' %}" alt="Second slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="">Boost Confidence, Improve Grades</h5>
-            <p class="">Bringing learning home is easy
 
-            </p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="{% static 'images/carsl2.jpg' %}" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="">Boost Confidence, Improve Grades</h5>
-            <p class="">Bringing learning home is easy
-
-            </p>
-          </div>
-        </div> -->
         </div>
       </div>
+
+      <!-- <div class="jumbotron jumbotron-fluid">
+        <div class="container hdcontainer">
+          <h5 class="display-4 hd1">Boost Confidence, Improve Grades</h5>
+          <p class="lead hd2 text-center ">Bringing learning home is easy</p>
+        </div>
+      </div> -->
+
 
     </div>
   </div>
@@ -221,7 +353,7 @@
         <p class="features2">Change is the end result of all true learning.</p>
       </div>
 
-      <div class="col-lg-4" style="margin-top: 20px;">
+      <div class="col-lg-4 col-12 col-md-6" style="margin-top: 20px;">
         <div class="card shadow p-3 mb-5 bg-white rounded featurecard"
           style="width: 25rem; height: 16rem; border-radius: 15px;">
           <div class="card-body">
@@ -235,11 +367,11 @@
 
       </div>
 
-      <div class="col-lg-4" style="margin-top: 20px;">
+      <div class="col-lg-4 col-12 col-md-6" style="margin-top: 20px;">
         <div class="card shadow p-3 mb-5 bg-white rounded featurecard"
           style="width: 25rem; height: 16rem; border-radius: 15px;">
           <div class="card-body">
-            <i class="fa fa-people-arrows"></i>
+            <i class="fa fa-users" id="fticon"></i>
             <h5 class="card-title"><br> One-to-One Sessions</h5>
             <p class="card-text">2-way Interaction between student & teacher, better than recorded videos</p>
 
@@ -248,7 +380,7 @@
 
       </div>
 
-      <div class="col-lg-4" style="margin-top: 20px;">
+      <div class="col-lg-4 col-12 col-md-6" style="margin-top: 20px;">
         <div class="card shadow p-3 mb-5 bg-white rounded featurecard"
           style="width: 25rem; height: 16rem; border-radius: 15px;">
           <div class="card-body">
@@ -266,7 +398,7 @@
 
       <!-- 2nd part of our features -->
 
-      <div class="col-lg-4 my-5">
+      <div class="col-lg-4 my-5 col-12 col-md-6">
         <div class="card shadow p-3 mb-5 bg-white rounded featurecard"
           style="width: 25rem; height: 16rem; border-radius: 15px;">
           <div class="card-body">
@@ -280,11 +412,11 @@
 
       </div>
 
-      <div class="col-lg-4 my-5">
+      <div class="col-lg-4 my-5 col-12 col-md-6">
         <div class="card shadow p-3 mb-5 bg-white rounded featurecard"
           style="width: 25rem; height: 16rem; border-radius: 15px;">
           <div class="card-body">
-            <i class="fa fa-graduation-cap" id="fticon"></i>
+            <i class="fa fa-clock-o" id="fticon"></i>
             <h5 class="card-title"><br>Flexibility of choosing hours and time</h5>
             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit vero perspiciatis
               magni.</p>
@@ -294,11 +426,11 @@
 
       </div>
 
-      <div class="col-lg-4 my-5">
+      <div class="col-lg-4 my-5 col-12 col-md-6">
         <div class="card shadow p-3 mb-5 bg-white rounded featurecard"
           style="width: 25rem; height: 16rem; border-radius: 15px;">
           <div class="card-body">
-            <i class="fa fa-graduation-cap" id="fticon"></i>
+            <i class="fa fa-universal-access" id="fticon"></i>
             <h5 class="card-title"><br>Convenient & Safe</h5>
             <p class="card-text">No need to travel, learn at the comfort & safety of your home</p>
 
@@ -351,20 +483,9 @@
     <div class="carousel-inner" role="listbox">
 
       <!--First slide-->
-      <div class="carousel-item active">
+      <div class="carousel-item active classcar">
 
-        <!-- <div class="col-md-3" style="float:left">
-     <div class="card mb-2">
-        <img class="card-img-top"
-          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">1-4 Standard</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-            card's content.</p>
-          <a class="btn btn-danger">Enroll Now</a>
-        </div>
-      </div>
-    </div> -->
+
 
         <div class="col-md-4" style="float:left">
           <div class="card mb-2">
@@ -373,7 +494,7 @@
               <h4 class="card-title">5-7 Standard</h4>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a class="btn btn-danger">Enroll Now</a>
+              <a class="btn btn-danger" href="/kersylb">Enroll Now</a>
             </div>
           </div>
         </div>
@@ -387,6 +508,17 @@
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
               <a class="btn btn-danger">Enroll Now</a>
+              <!-- <div class="dropdown">
+                <button class="btn btn-danger dropbtn">Enroll Now</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
+              ------ -->
+
+
             </div>
           </div>
         </div>
@@ -407,7 +539,7 @@
       <!--/.First slide-->
 
       <!--Second slide-->
-      <div class="carousel-item">
+      <div class="carousel-item ">
 
         <div class="col-md-4" style="float:left">
           <div class="card mb-2">
@@ -459,6 +591,19 @@
       </div>
     </div> -->
 
+        <!-- <div class="col-md-3" style="float:left">
+     <div class="card mb-2">
+        <img class="card-img-top"
+          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">1-4 Standard</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+          <a class="btn btn-danger">Enroll Now</a>
+        </div>
+      </div>
+    </div> -->
+
       </div>
       <!--/.Second slide-->
 
@@ -472,375 +617,17 @@
 
 
 
-<!-- 2nd Part Of  Class benefit-->
-
-<!-- 
-<div class="row  pt-5 pl-5 clsft ">
-
-  <div class="col lg-12 ftrscontainer">
-      <h2 class="ftrshead"> Here’s what you get after enrolling with us</h2>
-
-     <div class="col lg-6">
-      
-         <div class="planbenefitsection">
-             <div class="twoplanbenefitcontainer">
-              <div class="planbenefitcontainer">
-                  <div class="planbenefittext">
-                      Real Personal Attention
-                  </div>
-                  <div class="planbenefitseparator"></div>
-
-              </div>
-              <div class="planbenefitcontainer">
-                  <div class="planbenefittext">
-                      Syllabus Oriented Classes
-                  </div>
-                  <div class="planbenefitseparator"></div>
-
-              </div>
-
-
-             </div>
-
-             <div class="twoplanbenefitcontainer">
-              <div class="planbenefitcontainer">
-                  <div class="planbenefittext">
-                      Live Classes from Best Teachers
-                  </div>
-                  <div class="planbenefitseparator"></div>
-
-              </div>
-              <div class="planbenefitcontainer">
-                  <div class="planbenefittext">
-                      Dedicated Academic Mentor
-                  </div>
-                  <div class="planbenefitseparator"></div>
-
-              </div>
-
-
-             </div>
-
-             <div class="twoplanbenefitcontainer">
-              <div class="planbenefitcontainer">
-                  <div class="planbenefittext">
-                      Offline Videos
-                  </div>
-                  <div class="planbenefitseparator"></div>
-
-              </div>
-              <div class="planbenefitcontainer">
-                  <div class="planbenefittext">
-                      Practice Questions
-                  </div>
-                  <div class="planbenefitseparator"></div>
-
-              </div>
-
-
-             </div> 
-
-             <div class="twoplanbenefitcontainer">
-              <div class="planbenefitcontainer">
-                  <div class="planbenefittext">
-                      Home Test
-                  </div>
-                  <div class="planbenefitseparator"></div>
-
-              </div>
-              <div class="planbenefitcontainer">
-                  <div class="planbenefittext">
-                      Parent Corner
-                  </div>
-                  <div class="planbenefitseparator"></div>
-
-              </div>
-
-
-             </div>
-
-
-
-             
-
-
-
-
-
-
-
-
-         </div>
-      
-
-     </div>
-     
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-
-
- 
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
- -->
-
-
-
 
   <!-- Testimonials PART   -->
 
-
+  <!-- 
   <div class="row">
     <div class="col-md-12 testcol mt-5">
       <h2 class="coursedetails">Testimonials</h2>
       <p class="coursedetails2">Students & Parents sharing their Experience</p>
     </div>
-  </div>
+  </div> -->
 
-
-
-<!-- 
-  <!-- Carousel wrapper -->
-  <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
-    <!-- Controls
-    <div class="d-flex justify-content-center mb-4">
-      <button class="carousel-control-prev position-relative" type="button" data-mdb-target="#carouselMultiItemExample"
-        data-mdb-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next position-relative" type="button" data-mdb-target="#carouselMultiItemExample"
-        data-mdb-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div> -->
-    <!-- Inner -->
-    <div class="carousel-inner py-4">
-      <!-- Single item -->
-      <div class="carousel-item active">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <img class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="avatar" style="width: 150px;" />
-              <h5 class="mb-3">Anna Deynah</h5>
-              <p>Parent , Class 10<sup>th</sup></p>
-              <p class="text-muted">
-                <i class="fa fa-quote-left pe-2"></i>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-              </ul>
-            </div>
-
-            <div class="col-lg-4 d-none d-lg-block">
-              <img class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar" style="width: 150px;" />
-              <h5 class="mb-3">John Doe</h5>
-              <p>Student , Class 12<sup>th</sup></p>
-              <p class="text-muted">
-                <i class="fa fa-quote-left pe-2"></i>
-                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                suscipit laboriosam, nisi ut aliquid commodi.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li>
-                  <i class="fa fa-star-half-alt fa-sm"></i>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-4 d-none d-lg-block">
-              <img class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar" style="width: 150px;" />
-              <h5 class="mb-3">Maria Kate</h5>
-              <p>Parent , Class 11<sup>th</sup></p>
-              <p class="text-muted">
-                <i class="fa fa-quote-left pe-2"></i>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque corrupti.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Single item -->
-      <!-- <div class="carousel-item">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <img class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(3).webp" alt="avatar" style="width: 150px;" />
-              <h5 class="mb-3">John Doe</h5>
-              <p>UX Designer</p>
-              <p class="text-muted">
-                <i class="fas fa-quote-left pe-2"></i>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                <li><i class="fas fa-star fa-sm"></i></li>
-                <li><i class="fas fa-star fa-sm"></i></li>
-                <li><i class="fas fa-star fa-sm"></i></li>
-                <li><i class="fas fa-star fa-sm"></i></li>
-                <li><i class="fas fa-star fa-sm"></i></li>
-              </ul>
-            </div>
-
-            <div class="col-lg-4 d-none d-lg-block">
-              <img class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar" style="width: 150px;" />
-              <h5 class="mb-3">Alex Rey</h5>
-              <p>Web Developer</p>
-              <p class="text-muted">
-                <i class="fas fa-quote-left pe-2"></i>
-                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                suscipit laboriosam, nisi ut aliquid commodi.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                <li><i class="fas fa-star fa-sm"></i></li>
-                <li><i class="fas fa-star fa-sm"></i></li>
-                <li><i class="fas fa-star fa-sm"></i></li>
-                <li><i class="fas fa-star fa-sm"></i></li>
-                <li>
-                  <i class="fas fa-star-half-alt fa-sm"></i>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-4 d-none d-lg-block">
-              <img class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp" alt="avatar" style="width: 150px;" />
-              <h5 class="mb-3">Maria Kate</h5>
-              <p>Photographer</p>
-              <p class="text-muted">
-                <i class="fas fa-quote-left pe-2"></i>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque corrupti.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Single item -->
-      <!-- <div class="carousel-item">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <img class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(6).webp" alt="avatar" style="width: 150px;" />
-              <h5 class="mb-3">Anna Deynah</h5>
-              <p>UX Designer</p>
-              <p class="text-muted">
-                <i class="fas fa-quote-left pe-2"></i>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-              </ul>
-            </div>
-
-            <div class="col-lg-4 d-none d-lg-block">
-              <img class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(8).webp" alt="avatar" style="width: 150px;" />
-              <h5 class="mb-3">John Doe</h5>
-              <p>Web Developer</p>
-              <p class="text-muted">
-                <i class="fas fa-quote-left pe-2"></i>
-                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                suscipit laboriosam, nisi ut aliquid commodi.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li>
-                  <i class="fas fa-star-half-alt fa-sm"></i>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-4 d-none d-lg-block">
-              <img class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp" alt="avatar" style="width: 150px;" />
-              <h5 class="mb-3">Maria Kate</h5>
-              <p>Photographer</p>
-              <p class="text-muted">
-                <i class="fas fa-quote-left pe-2"></i>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque corrupti.
-              </p>
-              <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-                <li><i class="fa fa-star fa-sm"></i></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </div>
-    <!-- Inner -->
-  </div>
-  <!-- Carousel wrapper -->
 
 
 
@@ -913,10 +700,10 @@
               <h6 class="text-uppercase mb-4 font-weight-bold">HOME</h6>
               <p>
                 <a href="" class="text-white">Courses</a>
-                
-                
+
+
               </p>
-              
+
               <p>
                 <a href="teachersinfo/" class="text-white">Teachers</a>
               </p>
@@ -1047,6 +834,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     -->
+
+
+
+
+
+
+
 </body>
 
 </html>

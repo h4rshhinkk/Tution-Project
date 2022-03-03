@@ -21,5 +21,12 @@ def fnaboutus(request):
     return render(request,'aboutus.html')
 def fnc8std(request):
     return render(request,'c8std.html')
+def fnuserprofilemaster(request):
+    return render(request,'userprofilemaster.html')
+def fnuserprofile(request):
+    return render(request,'userprofile.html')
+def fnusersecurity(request):
+    return render(request,'usersecurity.html')
+
 
 

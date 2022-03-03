@@ -20,5 +20,5 @@ urlpatterns = [
   
     path('',include('tutionapp.urls')),
     path('admin/',include('tutionadmin.urls')),
-    path('teacherspanel/',include('teachersmod.urls'))
+    path('teachmod/',include('teachersmod.urls'))
 ]

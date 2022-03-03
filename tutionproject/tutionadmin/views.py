@@ -16,3 +16,7 @@ def fnadminstd(request):
     return render(request,'adminstudents.html')
 def fnadminpay(request):
     return render(request,'adminpayments.html')
+def fnadminreq(request):
+    return render(request,'adminrequests.html')
+def fnadminbook(request):
+    return render(request,'adminbooking.html')
